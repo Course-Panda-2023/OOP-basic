@@ -93,7 +93,7 @@ class CarsParkingLot
         {
             if (Object.ReferenceEquals(carList[i].GetType(), typeof(GasCar)))
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i); //printing the index of the car in the list
             }
         }
     }
@@ -104,7 +104,7 @@ class CarsParkingLot
         {
             if (Object.ReferenceEquals(carList[i].GetType(), typeof(ElectricCar)))
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i); //printing the index of the car in the list
             }
         }
     }
@@ -115,7 +115,7 @@ class CarsParkingLot
         {
             if (Object.ReferenceEquals(carList[i].GetType(), typeof(Hybrid)))
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i); //printing the index of the car in the list
             }
         }
     }
@@ -126,7 +126,7 @@ class CarsParkingLot
         {
             if (carList[i].Color == color)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i); //printing the index of the car in the list
             }
         }
     }
@@ -137,7 +137,7 @@ class CarsParkingLot
         {
             if (carList[i].Year >= year)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i); //printing the index of the car in the list
             }
         }
     }
