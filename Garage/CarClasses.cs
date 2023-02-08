@@ -88,9 +88,9 @@ class ParkingLot
             case "Gas":
                 foreach (Car car in cars)
                 {
-                    if (ReferenceEquals(car.GetType(), typeof(GasCar)))
+                    if (ReferenceEquals(car.GetType(), typeof(GasCar))) //If cars are of same type
                     {
-                        Console.WriteLine("Car number: " + i + " ");
+                        Console.WriteLine("Car number: " + i + " "); //Prints the index of the opropriate car
                     }
                     i++;
                 }
@@ -100,7 +100,7 @@ class ParkingLot
                 {
                     if (ReferenceEquals(car.GetType(), typeof(ElectricCar)))
                     {
-                        Console.WriteLine("Car number: " + i + " ");
+                        Console.WriteLine("Car number: " + i + " "); //Prints the index of the opropriate car
                     }
                     i++;
                 }
@@ -110,7 +110,7 @@ class ParkingLot
                 {
                     if (ReferenceEquals(car.GetType(), typeof(HybridCar)))
                     {
-                        Console.WriteLine("Car number: " + i + " ");
+                        Console.WriteLine("Car number: " + i + " "); //Prints the index of the opropriate car
                     }
                     i++;
                 }
@@ -127,7 +127,7 @@ class ParkingLot
         {
             if (car.Color == color)
             {
-                Console.WriteLine("Car number: " + i + " ");
+                Console.WriteLine("Car number: " + i + " "); //Prints the index of the opropriate car
             }
             i++;
         }
@@ -139,7 +139,7 @@ class ParkingLot
         {
             if (car.Year > year)
             {
-                Console.WriteLine("Car number: " + i + " ");
+                Console.WriteLine("Car number: " + i + " "); //Prints the index of the opropriate car
             }
             i++;
         }
