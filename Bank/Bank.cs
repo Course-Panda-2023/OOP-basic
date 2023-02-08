@@ -7,6 +7,10 @@ public class Account
     {
         this.money = money;
     }
+    public Account()
+    {
+        this.money = 0;
+    }
     public void addMoney(double toAdd)
     {
         this.money += toAdd;
@@ -50,6 +54,17 @@ public class Bank
             return;
         }
         Account account = new Account(moneyToAdd);
+        this.numberNames.Add(id, account);
+        this.numberOfAccount++;
+    }
+    public void addAccount(string id)
+    {
+        if (this.numberNames.ContainsKey(id))
+        {
+            Console.WriteLine("You already have an account");
+            return;
+        }
+        Account account = new Account();
         this.numberNames.Add(id, account);
         this.numberOfAccount++;
     }
