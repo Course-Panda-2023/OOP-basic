@@ -55,6 +55,11 @@ class Matrix
             return this.myMatrix[row, column];
         return null;
     }
+    public void SetValueAt(int row, int column, int value)
+    {
+        if (this.myMatrix != null)
+            this.myMatrix[row, column] = value;
+    }
     public int? SumRow(int row)
     {
         if (this.myMatrix != null)
@@ -111,34 +116,43 @@ class Matrix
             return false;
         }
     }
-    public void AddMatrix(Matrix m)
+    public static Matrix operator +(Matrix m1, Matrix m2)
     {
-        if (this.myMatrix != null && m.myMatrix != null)
+        Matrix ret = new Matrix(m1.Rows, m1.Cols);
+        if (ret.myMatrix != null && m1.myMatrix != null && m2.myMatrix != null)
         {
-            int[,] ret = new int[this.Rows, this.Cols];
-            for (int i = 0; i < this.Rows; i++)
-                for (int j = 0; j < this.Cols; j++)
-                    this.myMatrix[i, j] += m.myMatrix[i, j];
+            for (int i = 0; i < ret.Rows; i++)
+                for (int j = 0; j < ret.Cols; j++)
+                    ret.myMatrix[i, j] = m1.myMatrix[i, j] + m2.myMatrix[i, j];
+            return ret;
         }
+        ret.myMatrix = null;
+        return ret;
     }
-    public void SubMatrix(Matrix m)
+    public static Matrix operator -(Matrix m1, Matrix m2)
     {
-        if (this.myMatrix != null && m.myMatrix != null)
+        Matrix ret = new Matrix(m1.Rows, m1.Cols);
+        if (ret.myMatrix != null && m1.myMatrix != null && m2.myMatrix != null)
         {
-            int[,] ret = new int[this.Rows, this.Cols];
-            for (int i = 0; i < this.Rows; i++)
-                for (int j = 0; j < this.Cols; j++)
-                    this.myMatrix[i, j] -= m.myMatrix[i, j];
+            for (int i = 0; i < ret.Rows; i++)
+                for (int j = 0; j < ret.Cols; j++)
+                    ret.myMatrix[i, j] = m1.myMatrix[i, j] - m2.myMatrix[i, j];
+            return ret;
         }
+        ret.myMatrix = null;
+        return ret;
     }
-    public void MulMatrix(Matrix m)
+    public static Matrix operator *(Matrix m, int skalar)
     {
-        if (this.myMatrix != null && m.myMatrix != null)
+        Matrix ret = new Matrix(m.Rows, m.Cols);
+        if (ret.myMatrix != null && m.myMatrix != null)
         {
-            int[,] ret = new int[this.Rows, this.Cols];
-            for (int i = 0; i < this.Rows; i++)
-                for (int j = 0; j < this.Cols; j++)
-                    this.myMatrix[i, j] *= m.myMatrix[i, j];
+            for (int i = 0; i < ret.Rows; i++)
+                for (int j = 0; j < ret.Cols; j++)
+                    ret.myMatrix[i, j] = m.myMatrix[i, j] * skalar;
+            return ret;
         }
+        ret.myMatrix = null;
+        return ret;
     }
 }
