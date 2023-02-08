@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\OOPBaicsProject.csproj",
-      "projectName": "OOPBaicsProject",
-      "projectPath": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\OOPBaicsProject.csproj",
+      "projectUniqueName": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\Matrix.csproj",
+      "projectName": "Matrix",
+      "projectPath": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\Matrix.csproj",
       "packagesPath": "C:\\Users\\AssafHillel\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\obj\\",
       "projectStyle": "PackageReference",
