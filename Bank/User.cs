@@ -20,7 +20,18 @@ namespace Investment
             this.id = id;
             this.password = password;
         }
+        public bool checkPassword(String passwordTry)
+        {
+            return String.Equals(passwordTry, this.password);
+        }
 
+        public void addBalance(double money)
+        {
+            this.accountBalance += money;
+            Console.WriteLine("Money deposited");
+        }
         public int Id { get { return id; } }
+        public double AccountBalance { get { return accountBalance; } }
+        public string Name { get { return name; } }
     }
 }

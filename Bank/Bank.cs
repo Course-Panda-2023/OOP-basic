@@ -10,61 +10,155 @@ namespace Investment
     internal class Bank
     {
         private List<User> userList;
+        private int currentYear;
+
+        public Bank()
+        {
+            this.currentYear = 0;
+            this.userList = new List<User>();
+        }
 
         public void OpenBank()
         {
             bool closeBank = false;
             String input = "";
+            int money = 0;
             while (closeBank == false)
             {
                 Console.WriteLine("Hello and welcome to the 666BankOnline services.\n" +
                 "Please choose one of the following services by pressing the designated button:\n" +
                 "1 - Open a new account\n" +
                 "2 - Enter your account\n" +
-                "3 - Wait a year\n");
+                "3 - Wait a year\n" +
+                "4 - remove an account");
                 input = Console.ReadLine();
                 switch (input)
                 {
                     case "1":
                         User u = createAccount();
+                        this.userList.Add(u);
                         break;
                     case "2":
+                        User uenter = enterAccount();
+                        Console.WriteLine("How much money would you like to deposit?");
+                        bool isMoneyValid = false;
+                        while (isMoneyValid == false)
+                        {
+                            try
+                            {
+                                money = Int32.Parse(Console.ReadLine());
+                                isMoneyValid = true;
+                            }
+                            catch (Exception ex) { Console.WriteLine("Invalid amount"); }
+                            uenter.addBalance(money);
+                        }
 
                         break;
                     case "3":
-
+                        waitYear();
+                        break;
+                    case "4":
+                        User uremove = removeAccount();
+                        this.userList.Remove(uremove);
                         break;
                     default:
-
+                        Console.WriteLine("Try again");
                         break;
                 }
             }
 
         }
 
-        public User enterAccount()
+        public double Interest(int year)
+        {
+            if (year == 0)
+            {
+                return 0.03;
+            }
+            Random r = new Random();
+            double delta = r.NextDouble() * 3 - 1;
+            if (Interest(year - 1) + delta < 0)
+            {
+                return 0;
+            }
+            return Interest(year - 1) + delta;
+        }
+
+        public void waitYear()
+        {
+            foreach (User u in this.userList)
+            {
+                u.addBalance(u.AccountBalance * Interest(currentYear));
+            }
+            currentYear++;
+        }
+
+        public User removeAccount()
         {
             bool isLoggedIn = false;
+            int input = 0;
+            String inputStr = "";
             while (isLoggedIn == false)
             {
                 Console.WriteLine("Enter id");
                 try
                 {
-                    int input = Int32.Parse(Console.ReadLine());
+                    input = Int32.Parse(Console.ReadLine());
                 }
                 catch (Exception e)
                 {
-
+                    Console.WriteLine("invalid Id.");
                 }
                 foreach (User u in this.userList)
                 {
-                    if (String.Equals(input, u.Id) == true)
+                    if (input == u.Id)
                     {
-
+                        Console.WriteLine("Enter password:");
+                        inputStr = Console.ReadLine();
+                        if (u.checkPassword(inputStr) == true)
+                        {
+                            Console.WriteLine("Removing account...");
+                            return u;
+                        }
                     }
                 }
+                Console.WriteLine("User id not in our system, or password is invalid.");
             }
+            return null;
+        }
 
+        public User enterAccount()
+        {
+            bool isLoggedIn = false;
+            int input = 0;
+            String inputStr = "";
+            while (isLoggedIn == false)
+            {
+                Console.WriteLine("Enter id");
+                try
+                {
+                    input = Int32.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("invalid Id.");
+                }
+                foreach (User u in this.userList)
+                {
+                    if (input == u.Id)
+                    {
+                        Console.WriteLine("Enter password:");
+                        inputStr = Console.ReadLine();
+                        if (u.checkPassword(inputStr) == true)
+                        {
+                            Console.WriteLine("Entering account...");
+                            return u;
+                        }
+                    }
+                }
+                Console.WriteLine("User id not in our system, or password is invalid.");
+            }
+            return null;
         }
         public static User createAccount()
         {

@@ -1,3 +1,4 @@
+using Investment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace InvestmentBank
     {
         static void Main(string[] args)
         {
-
+            Bank bank = new Bank();
+            bank.OpenBank();
         }
     }
 }
