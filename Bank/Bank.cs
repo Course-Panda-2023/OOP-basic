@@ -5,8 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 class Bank
 {
-    private double ribit = 0.03;
+    private double ribit = 3;
     private List<BankAccount> accounts;
+    public List<BankAccount> Accounts
+    {
+        get { return accounts; }
+        set { accounts = value; }
+    }
     public Bank()
     {
         this.accounts = new List<BankAccount>();
@@ -31,5 +36,12 @@ class Bank
         this.ribit += randonNum;
         if (ribit > 0)
             ribit = 0;
+    }
+    public void UpdateAccountsBalanceAfterRibitUpdate()
+    {
+        foreach (BankAccount account in this.accounts)
+        {
+            account.Balance *= (1 + ribit / 100);
+        }
     }
 }

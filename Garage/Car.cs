@@ -13,42 +13,43 @@ abstract class Car
     /// string color 
     /// string firm
     /// </summary>
-    private double price;
+    protected double price;
     public double Price
     {
-        get { return price; } 
+        get { return price; }
         set { price = value; }
     }
-    private int year;
+    protected int year;
     public int Year
     {
         get { return year; }
         set { year = value; }
     }
-    private int kilometer;
+    protected int kilometer;
     public int Kilometer
     {
         get { return kilometer; }
         set { kilometer = value; }
     }
-    private string? color;
-    public string? Color { 
+    protected string? color;
+    public string? Color
+    {
         get { return color; }
         set { color = value; }
     }
-    private string? firm;
+    protected string? firm;
     public string? Firm
-    { 
+    {
         get { return firm; }
         set { firm = value; }
     }
-    private EngineType? engine;
+    protected EngineType? engine;
     public EngineType? Engine
     {
         get { return engine; }
         set { engine = value; }
     }
-    public Car(double price, int year, int kilometer, string color, string firm, EngineType engine) 
+    public Car(double price, int year, int kilometer, string color, string firm, EngineType engine)
     {
         this.price = price;
         this.year = year;
