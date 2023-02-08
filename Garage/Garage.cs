@@ -76,6 +76,14 @@ public class HybridCar : Car
 public class CarLot
 {
     List<Car> cars = new List<Car>();
+    void addCar(Car car)
+    {
+        cars.Add(car);
+    }
+    void removeCar(Car car)
+    {
+        cars.Remove(car);
+    }
     void getGasCars()
     {
         foreach (Car car in cars)
@@ -85,14 +93,6 @@ public class CarLot
                 Console.WriteLine(car.ToString());
             }
         }
-    }
-    void addCar(Car car)
-    {
-        cars.Add(car);
-    }
-    void removeCar(Car car)
-    {
-        cars.Remove(car);
     }
     void getElectricCars()
     {
