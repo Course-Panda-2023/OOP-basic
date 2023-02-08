@@ -29,15 +29,17 @@ public class Account
 public class Bank
 {
     private int numberOfAccount;
-    public IDictionary<int, Account> numberNames;
+    private IDictionary<int, Account> numberNames;
     public double interest;
-    double prevInterest;
+    private double prevInterest;
+    private bool isStartYear;
     public Bank()
     {
         this.numberOfAccount = 0;
         this.numberNames = new Dictionary<int, Account>();
         this.prevInterest = 0;
         this.interest = 0.3;
+        this.isStartYear = false;
     }
 
     public void addAccount(double moneyToAdd, int id)
@@ -53,6 +55,11 @@ public class Bank
     }
     public void addMoney(int id, double moneyToAdd)
     {
+        if (!this.isStartYear)
+        {
+            Console.WriteLine("now not start of the year");
+            return;
+        }
         if (!this.numberNames.ContainsKey(id))
         {
             Console.WriteLine("You dont have an account");
@@ -63,6 +70,11 @@ public class Bank
     }
     public void takeMoney(int id, double moneyToTake)
     {
+        if (!this.isStartYear)
+        {
+            Console.WriteLine("now not start of the year");
+            return;
+        }
         if (!this.numberNames.ContainsKey(id))
         {
             Console.WriteLine("You dont have an account");
@@ -74,6 +86,16 @@ public class Bank
 
     public void deleteAccunt(int id)
     {
+        if (!this.isStartYear)
+        {
+            Console.WriteLine("now not start of the year");
+            return;
+        }
+        if (!this.isStartYear)
+        {
+            Console.WriteLine("now not start of the year");
+            return;
+        }
         if (!this.numberNames.ContainsKey(id))
         {
             Console.WriteLine("You dont have an account");
@@ -86,6 +108,11 @@ public class Bank
     }
     public void updateInterest()
     {
+        if (!this.isStartYear)
+        {
+            Console.WriteLine("now not start of the year");
+            return;
+        }
         this.prevInterest = this.interest;
         Random rnd = new Random();
         double temp = ((double)rnd.Next(-1, 2)) / 100;
@@ -94,9 +121,30 @@ public class Bank
 
     public void addToInterestAccount()
     {
+        if (!this.isStartYear)
+        {
+            Console.WriteLine("now not start of the year");
+            return;
+        }
         foreach (Account acc in this.numberNames.Values)
         {
             acc.addedInterest(this.interest);
         }
+    }
+    void setStartOfYear()
+    {
+        this.isStartYear = true;
+    }
+    void isNotstartOfYear()
+    {
+        this.isStartYear = false;
+    }
+
+    void inStartOfYear()
+    {
+        //run this func in start of the year
+        setStartOfYear();
+        addToInterestAccount();
+        updateInterest();
     }
 }
