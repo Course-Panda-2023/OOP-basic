@@ -1,12 +1,16 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class HelloWorld
+namespace InvestmentBank
 {
-    public static void Main(string[] args)
+    class Program
     {
-       /*
-       The menu for the bank will be here
-       Make convenient and intuitive menu
-       */
+        static void Main(string[] args)
+        {
+
+        }
     }
 }
