@@ -8,11 +8,11 @@ namespace Cars
 {
     public abstract class Car
     {
-        private int Price;
-        private int YearOfMake;
-        private int Km;
-        private string color;
-        private string manifactur;
+        protected int YearOfMake;
+        protected int Price;
+        protected int Km;
+        protected string color;
+        protected string manifactur;
 
         protected Car(int price, int yearOfMake, int km, string color, string manifactur)
         {
