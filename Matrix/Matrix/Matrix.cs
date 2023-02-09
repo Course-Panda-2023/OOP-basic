@@ -5,25 +5,25 @@ public class Matrix
 {
     private double[,] matrix;
 
-    enum Functions
-    {
-        add,
-        sub
-    }
-
     public int GetRowAmount() { return matrix.GetLength(0); }
+    public int GetColAmount() { return matrix.GetLength(0); }
+
     public void SetValueAt(int i, int j, double value) { matrix[i, j] = value; }
 
-    public Matrix(int[,] m)
+    public Matrix(double[,] m)
     {
         matrix = new double[m.GetLength(0), m.GetLength(1)];
         for (int i = 0; i < m.GetLength(0); i++)
-        {
             for (int j = 0; j < m.GetLength(1); j++)
-            {
-                matrix[i, j] = m[i, j];
-            }
-        }
+                matrix[i, j] = m [i, j];
+    }
+
+    public Matrix(Matrix m)
+    {
+        matrix = new double[m.GetRowAmount(), m.GetColAmount()];
+        for (int i = 0; i < m.GetRowAmount(); i++)
+            for (int j = 0; j < m.GetColAmount(); j++)
+                matrix[i, j] = m.GetValueAt(i, j);
     }
 
     public Matrix (int row, int col)
@@ -38,19 +38,24 @@ public class Matrix
 
     public double SumRow(int row)
     {
-        return SumHelper(row, matrix.GetLength(1));
+        return SumHelper(row - 1, matrix.GetLength(1), 'r');
     }
 
     public double SumColumn(int col)
     {
-        return SumHelper(col, matrix.GetLength(0)); ;
+        return SumHelper(col - 1, matrix.GetLength(0), 'c');
     }
 
-    public double SumHelper (int place, int numsToSum)
+    public double SumHelper (int place, int numsToSum, char rc)
     {
         double sum = 0;
         for (int i = 0; i < numsToSum; i++)
-            sum += matrix[place - 1, i];
+        {
+            if (rc == 'r')
+                sum += matrix[place, i];
+            else
+                sum += matrix[i, place];
+        }
         return sum;
     }
     
@@ -66,7 +71,7 @@ public class Matrix
     {
         double sum = 0;
         for (int i = 0; i < m.GetRowAmount(); i++)
-            sum += m.SumColumn(i);
+            sum += m.SumRow(i + 1);
         return sum;
     }
 
@@ -74,12 +79,8 @@ public class Matrix
     {
         Matrix m = new Matrix(matrix.GetLength(0), matrix.GetLength(1));
         for (int i = 0; i < matrix.GetLength(0); i++)
-        {
             for (int j = 0; j < matrix.GetLength(1); j++)
-            {
                 m.SetValueAt(i, j, GetValueAt(i + 1, j + 1) * scalar);
-            }
-        }
         return m;
     }
 
@@ -95,17 +96,18 @@ public class Matrix
 
     public Matrix Operators(Matrix m, char c)
     {
+        Matrix newM = new Matrix (matrix.GetLength(0), matrix.GetLength(1));
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 if (c == '+')
-                    m.SetValueAt(i, j, GetValueAt(i + 1, j + 1) + matrix[i, j]);
+                    newM.SetValueAt(i, j, m.GetValueAt(i + 1, j + 1) + matrix[i, j]);
                 else
-                    m.SetValueAt(i, j, matrix[i, j] - GetValueAt(i + 1, j + 1));
+                    newM.SetValueAt(i, j, matrix[i, j] - m.GetValueAt(i + 1, j + 1));
             }
         }
-        return m;
+        return newM;
     }
 
     public void PrintMatrix()
@@ -114,7 +116,7 @@ public class Matrix
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                Console.Write(GetValueAt(i, j) + " ");
+                Console.Write(GetValueAt(i + 1, j + 1) + " ");
             }
             Console.WriteLine();
         }
