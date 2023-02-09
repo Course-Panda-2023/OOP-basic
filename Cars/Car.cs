@@ -8,19 +8,19 @@ namespace Cars
 {
     public abstract class Car
     {
-        protected int YearOfMake;
-        protected int Price;
-        protected int Km;
-        protected string color;
-        protected string manifactur;
+        public int YearOfMake { get; }
+        public int Price { get; }
+        public int Km { get; }
+        public string Color { get; }
+        public string Manifactur { get; }
 
         protected Car(int price, int yearOfMake, int km, string color, string manifactur)
         {
             this.Price = price;
             this.YearOfMake = yearOfMake;
             this.Km = km;
-            this.color = color;
-            this.manifactur = manifactur;
+            this.Color = color;
+            this.Manifactur = manifactur;
         }
     }
 }
