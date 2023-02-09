@@ -1,11 +1,19 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class HelloWorld
+namespace Matrices
 {
-    public static void Main(string[] args)
+    class Program
     {
-        /*
-        Test your class here
-        */
+        static void Main(string[] args)
+        {
+            Matrix A = new Matrix(3, 3);
+            double[,] doubleArr = new double[3, 3] { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
+            Matrix B = new Matrix(doubleArr, 3, 3);
+            Matrix C = A.OperatorAdd(B);
+        }
     }
 }
