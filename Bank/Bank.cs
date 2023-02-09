@@ -179,22 +179,25 @@ public class Bank
     {
         Console.WriteLine(this.numberNames[id].getMoney());
     }
+    void showMasssege(int numYear) 
+    {
+        Console.WriteLine($"the year is {numYear}");
+        Console.WriteLine("Choose what action to take: ");
+        Console.WriteLine("1 - Add money to your account");
+        Console.WriteLine("2 - Withdraw money from your account");
+        Console.WriteLine("3 - Close your account");
+        Console.WriteLine("Enter the number that corresponds to the desired action.");
+    }
     public void runProgram()
     {
-
+        string id;
+        int Money;
         this.setStartOfYear();
         for (int i = 0; true; i++)
         {
-            Console.WriteLine($"the year is {i}");
-            Console.WriteLine("Choose what action to take: ");
-            Console.WriteLine("1 - Add money to your account");
-            Console.WriteLine("2 - Withdraw money from your account");
-            Console.WriteLine("3 - Close your account");
-            Console.WriteLine("Enter the number that corresponds to the desired action.");
+            showMasssege(i);
             string coomend = Console.ReadLine();
             int intCoomend = Convert.ToInt32(coomend);
-            string id;
-            int Money;
             switch (intCoomend)
             {
                 case 1:
