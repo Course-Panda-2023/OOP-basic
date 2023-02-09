@@ -9,6 +9,7 @@ namespace Investment
 {
     internal class Bank
     {
+        private double interest;
         private List<User> userList;
         private int currentYear;
 
@@ -16,6 +17,7 @@ namespace Investment
         {
             this.currentYear = 0;
             this.userList = new List<User>();
+            this.interest = 0.03;
         }
 
         public void OpenBank()
@@ -69,26 +71,26 @@ namespace Investment
 
         }
 
-        public double Interest(int year)
+        public double Interest()
         {
-            if (year == 0)
-            {
-                return 0.03;
-            }
             Random r = new Random();
             double delta = r.NextDouble() * 3 - 1;
-            if (Interest(year - 1) + delta < 0)
+            if (this.interest + delta < 0)
             {
+                this.interest = 0;
                 return 0;
             }
-            return Interest(year - 1) + delta;
+            double tempInterest = this.interest;
+            this.interest += delta;
+            return tempInterest + delta;
         }
 
         public void waitYear()
         {
+            double currentInterest = Interest();
             foreach (User u in this.userList)
             {
-                u.addBalance(u.AccountBalance * Interest(currentYear));
+                u.addBalance(u.AccountBalance * currentInterest);
             }
             currentYear++;
         }
