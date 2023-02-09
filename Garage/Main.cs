@@ -11,7 +11,7 @@ public class HelloWorld
         list.AddCar(car);
         list.AddCar(car2);
         list.AddCar(car3);
-        list.PrintElectric();
+        list.PrintType(typeof(GasCar));
         list.GetCarInfo(car);
         list.PrintByYear(2005);
 

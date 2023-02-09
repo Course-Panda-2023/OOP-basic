@@ -2,13 +2,13 @@
 
 public class Bank
 {
-    private double balance;
-    private double interest = 3;
-    private static double delta;
+    private double mBalance;
+    private double mInterest = 3;
+    private static double mDelta;
 
     public Bank(double money)
     {
-        balance = money;
+        mBalance = money;
         SetDelta();
         Console.WriteLine("Welcome to the bank! You can deposit and credit money!\n The bank offers a starter interest of 3%, that grows by the following formula! \nmax{interest(n-1)=delta,0}" +
         " and delta is set randomly every year to be between [-1,2]!\n");
@@ -16,7 +16,7 @@ public class Bank
     }
     public Bank()
     {
-        balance = 0;
+        mBalance = 0;
         SetDelta();
         Console.WriteLine("Welcome to the bank! You can deposit and credit money!\n The bank offers a starter interest of 3%, that grows by the following formula! \nmax{interest(n-1)=delta,0}" +
         " and delta is set randomly every year to be between [-1,2]!\n");
@@ -26,34 +26,34 @@ public class Bank
         double minimum = -1;
         double maximum = 2;
         Random random = new Random();
-        delta = random.NextDouble() * (maximum - minimum) + minimum;
+        mDelta = random.NextDouble() * (maximum - minimum) + minimum;
     }
     public void AddToBalance(double amount)
     {
-        balance += amount;
+        mBalance += amount;
     }
     public double GetInterest()
     {
-        return interest;
+        return mInterest;
     }
     public void SubstructFromBalance(double amount)
     {
-        balance -= amount;
+        mBalance -= amount;
     }
     public void CloseAccount()
     {
-        Console.WriteLine($"Balance is: {balance}");
+        Console.WriteLine($"Balance is: {mBalance}");
     }
     public void NewYear()
     {
         SetDelta();
-        interest = Math.Max(interest + delta, 0);
-        balance = balance * (1 + interest * 0.01);
+        mInterest = Math.Max(mInterest + mDelta, 0);
+        mBalance = mBalance * (1 + mInterest * 0.01);
     }
 
     public double GetBalance()
     {
-        return balance;
+        return mBalance;
     }
 }
 
