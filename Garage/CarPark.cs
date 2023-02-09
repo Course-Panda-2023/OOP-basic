@@ -21,32 +21,12 @@ class CarPark
         if (this.cars.Contains(car))
             this.cars.Remove(car); 
     }
-    public List<Car> getElectricCars() 
-    { 
-        List<Car> list = new List<Car>();
-        foreach (Car car in this.cars) 
-        {
-            if (car.Engine == EngineType.Electric)
-                list.Add(car); 
-        }
-        return list;
-    }
-    public List<Car> getGasCars()
+    public List<Car> getCarByEngineType(EngineType engineType)
     {
         List<Car> list = new List<Car>();
         foreach (Car car in this.cars)
         {
-            if (car.Engine == EngineType.Gas)
-                list.Add(car);
-        }
-        return list;
-    }
-    public List<Car> getHybridCars()
-    {
-        List<Car> list = new List<Car>();
-        foreach (Car car in this.cars)
-        {
-            if (car.Engine == EngineType.Hybrid)
+            if (car.Engine == engineType)
                 list.Add(car);
         }
         return list;
