@@ -1,4 +1,4 @@
-namespace ClassLibrary1.CarGarage;
+namespace OOP.CarGarage;
 
 public abstract class Car
 {
@@ -8,14 +8,14 @@ public abstract class Car
     internal readonly string Color;
     internal readonly string Firm;
     internal readonly CarType Type;
-    
+
     // constructor is protected cause it won't be used outside of the inheriting classes
     // because we can't create instances of this class as it's an abstract one
     protected Car(double price, int productionYear, int kilometer, string color, string firm, CarType type)
     {
         Price = price;
         ProductionYear = productionYear;
-        Kilometer = kilometer; 
+        Kilometer = kilometer;
         Color = color;
         Firm = firm;
         Type = type;

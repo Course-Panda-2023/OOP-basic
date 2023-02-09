@@ -1,14 +1,15 @@
-namespace ClassLibrary1.CarGarage;
+namespace OOP.CarGarage;
+
 
 public class CarGarage
 {
     private Car[] _cars;
-    
+
     public CarGarage(Car[] cars)
     {
         _cars = cars;
     }
-    
+
     private delegate bool ChoiceCondition(Car car);
 
     private void GetByCondition(ChoiceCondition condition)

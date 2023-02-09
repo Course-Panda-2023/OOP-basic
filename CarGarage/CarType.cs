@@ -1,4 +1,4 @@
-namespace ClassLibrary1.CarGarage;
+namespace OOP.CarGarage;
 
 public enum CarType
 {
