@@ -8,7 +8,13 @@ namespace Bank.Model
 {
     internal class BankModel
     {
-        List<Account> allUsers = new();
+        private List<Account> allUsers = new();
+
+        public List<Account> AllUsers
+        {
+            get { return allUsers; }
+            set { allUsers = value; }
+        }
 
         public void AddUser(Account account)
         {

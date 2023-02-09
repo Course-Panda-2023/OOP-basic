@@ -9,6 +9,12 @@ namespace Bank.Model
     internal class Account
     {
         private double balance;
+        private User user;
+        public Account(User user)
+        {
+            this.user = user;
+            balance = 0;
+        }
 
         public double Balance
         {
