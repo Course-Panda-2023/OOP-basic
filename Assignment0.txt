@@ -1,1 +1,32 @@
 Write your answers here:
+
+1.
+Public: The member can be accessed from anywhere in the code.
+Protected: The member can be accessed within the same class and its derived classes.
+Private: The member can only be accessed within the same class.
+Internal: The member can be accessed within the same assembly, but not from another assembly. (In C#, this is the default access level if no access modifier is specified.)
+
+2.
+Hide and limit functions to be used by the internal object only.
+
+3.
+Field = directly declared in a class
+Property = directly declared and able to change/get on a class
+
+4. 
+Const - when we want a number we know we will not change during the code (for example pi, e, etc)
+Readonly - when we want to assign a object to something (for example id)
+
+5.
+No, it is like every get and set function
+
+6.
+
+On a indexer you access an object directly but on a property you access it by calling the object
+
+7. 
+
+You get an error. Sealed means the object cannot be directly inherited, but abstract means the object MUST be inherited
+
+8. 
+"Flamethrower"
