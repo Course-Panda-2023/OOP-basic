@@ -22,7 +22,7 @@ class InvestAccount
         this.interest = 3;
     }
 
-    public void YearlyUpdate()
+    public void UpdateYear()
     {
         this.interest = Math.Max(0, interest + random.Next(minDelta, maxDelta+1));
         this.money *= (1+this.interest*0.01);
@@ -32,11 +32,13 @@ class InvestAccount
     {
         this.money += amount;
     }
+    
+    public bool CheckIfWithdrawAllowed(double amount)
+    {
+        return amount > money;
+    }
     public void WithdrawMoney(double amount)
     {
-        if (amount > money)
-            Console.WriteLine("Sorry, no shorting.");
-        else
             this.money -= amount;
     }
 

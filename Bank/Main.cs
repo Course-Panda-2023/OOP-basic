@@ -17,7 +17,10 @@ public class BankMain
             account = new InvestAccount();
         }
             
+        const string depositOption = "Deposit";
+        const string withdrawOption = "Withdraw";
         bool finished = false;
+
         while (!finished)
         {
             Console.WriteLine($"Current interest is: {account.interest}");
@@ -27,13 +30,17 @@ public class BankMain
             string desicion = Console.ReadLine();
             switch (desicion)
             {
-                case "Deposit":
+                case depositOption:
                     Console.WriteLine("Enter amount to deposit");
                     account.DepositMoney(Convert.ToDouble(Console.ReadLine()));
                     break;
-                case "Withdraw":
+                case withdrawOption:
                     Console.WriteLine("Enter amount to withdraw");
-                    account.WithdrawMoney(Convert.ToDouble(Console.ReadLine()));
+                    double amount = Convert.ToDouble(Console.ReadLine());
+                    if (account.CheckIfWithdrawAllowed(amount))
+                        account.WithdrawMoney(amount);
+                    else    
+                        Console.WriteLine("Sorry, no shorting");
                     break;
                 default:
                     break;
@@ -41,7 +48,7 @@ public class BankMain
             Console.WriteLine("Are you finished? (yes/no)");
             if (Console.ReadLine() != "no")
                 finished = true;
-            account.YearlyUpdate();
+            account.UpdateYear();
         }
         Console.WriteLine($"Final amount in account is {account.money}");
     }

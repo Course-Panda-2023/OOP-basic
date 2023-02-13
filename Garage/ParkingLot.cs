@@ -40,7 +40,6 @@ class ParkingLot
                 {
                 removeIndex = i;
                 break;
-                // this.cars.Remove(car);
                 }
             i++;
         }

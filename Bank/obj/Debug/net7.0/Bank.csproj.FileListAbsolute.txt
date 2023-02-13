@@ -1,0 +1,15 @@
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\bin\Debug\net7.0\Bank.exe
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\bin\Debug\net7.0\Bank.deps.json
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\bin\Debug\net7.0\Bank.runtimeconfig.json
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\bin\Debug\net7.0\Bank.dll
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\bin\Debug\net7.0\Bank.pdb
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.csproj.AssemblyReference.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.AssemblyInfoInputs.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.AssemblyInfo.cs
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.csproj.CoreCompileInputs.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.dll
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\refint\Bank.dll
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.pdb
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\Bank.genruntimeconfig.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Bank\obj\Debug\net7.0\ref\Bank.dll
