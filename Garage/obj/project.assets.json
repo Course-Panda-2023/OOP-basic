@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\Matrix.csproj",
-      "projectName": "Matrix",
-      "projectPath": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\Matrix.csproj",
+      "projectUniqueName": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\Garage\\Garage.csproj",
+      "projectName": "Garage",
+      "projectPath": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\Garage\\Garage.csproj",
       "packagesPath": "C:\\Users\\AssafHillel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\OOPBaicsProject\\obj\\",
+      "outputPath": "C:\\Users\\AssafHillel\\source\\repos\\OOPBaicsProject\\Garage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
