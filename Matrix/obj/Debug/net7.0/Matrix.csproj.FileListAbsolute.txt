@@ -1,0 +1,15 @@
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\bin\Debug\net7.0\Matrix.exe
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\bin\Debug\net7.0\Matrix.deps.json
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\bin\Debug\net7.0\Matrix.runtimeconfig.json
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\bin\Debug\net7.0\Matrix.dll
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\bin\Debug\net7.0\Matrix.pdb
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.csproj.AssemblyReference.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.AssemblyInfoInputs.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.AssemblyInfo.cs
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.csproj.CoreCompileInputs.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.dll
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\refint\Matrix.dll
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.pdb
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\Matrix.genruntimeconfig.cache
+C:\Users\HILLEL\CSharpeProjects\OOP-basic\Matrix\obj\Debug\net7.0\ref\Matrix.dll
