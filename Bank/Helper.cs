@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ namespace Bank
 {
     internal class Helper
     {
+        const string YES = "Y";
+        const string NO = "N";
         public static void PrintMenu()
         {
             Console.WriteLine("1. Register Account");
@@ -19,11 +22,12 @@ namespace Bank
             Console.WriteLine("6. Close Account");
             Console.WriteLine("7. Exit");
         }
-        public static void Menu(List<BankAccount> accounts)
-        {           
-            while (true)            
-            {
-                BankOperations.UserOperations operation = GetUserValidChoice();
+        
+        public static void SimulateMenu(List<BankAccount> accounts)
+        {
+            BankOperations.UserOperations operation = GetUserValidChoice();
+            while (operation != BankOperations.UserOperations.Exit)         
+            {                
                 switch (operation)
                 {
                     case BankOperations.UserOperations.RegisterAccount:
@@ -47,6 +51,7 @@ namespace Bank
                     case BankOperations.UserOperations.Exit:
                         return;
                 }
+                operation = GetUserValidChoice();
             }
         }
         public static BankOperations.UserOperations GetUserValidChoice()
@@ -142,12 +147,12 @@ namespace Bank
             Console.WriteLine("Would you like to deposit an amount into the balance? : ");
             Console.WriteLine("Y/N: ");
             string responce = Console.ReadLine();
-            while(responce != "Y" && responce != "N")
+            while(responce != YES && responce != NO)
             {
                 Console.WriteLine("Invalid responce. Please enter Y or N: ");
                 responce = Console.ReadLine();
             }
-            if(responce == "Y")
+            if(responce == YES)
             {
                 Console.WriteLine("Enter amount: ");
                 double amount = double.Parse(Console.ReadLine());
@@ -172,12 +177,12 @@ namespace Bank
                 Console.WriteLine("Are you sure you want to close this account? : ");
                 Console.WriteLine("Y/N: ");
                 string responce = Console.ReadLine();
-                while (responce != "Y" && responce != "N")
+                while (responce != YES && responce != NO)
                 {
                     Console.WriteLine("Invalid responce. Please enter Y or N: ");
                     responce = Console.ReadLine();
                 }
-                if (responce == "Y")
+                if (responce == YES)
                 {
                     accounts.Remove(account);
                 }

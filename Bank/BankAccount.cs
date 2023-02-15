@@ -17,12 +17,12 @@ namespace Bank
         private double _currentInterest;
         public BankAccount(string name, string id, double balance)
         {
-            _name = name;
-            _id = id;
-            _balance = balance;
-            _accountNumber = _nextAccountNumber;
+            this._name = name;
+            this._id = id;
+            this._balance = balance;
+            this._accountNumber = _nextAccountNumber;            
+            this._currentInterest = 3;
             _nextAccountNumber++;
-            _currentInterest = 3;
         }
 
         public BankAccount(string name, string id) : this(name, id, 0)

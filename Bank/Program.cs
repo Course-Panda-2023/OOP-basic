@@ -13,6 +13,6 @@ public class HelloWorld
         Console.WriteLine("Hello and welcome to Simple Bank ");
         Console.WriteLine("Simplifying Your Finances, Simply with Simple Bank ");
         List<BankAccount> accounts = new List<BankAccount>();
-        Helper.Menu(accounts);
+        Helper.SimulateMenu(accounts);
     }
 }
