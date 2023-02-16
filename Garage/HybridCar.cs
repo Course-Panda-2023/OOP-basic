@@ -12,7 +12,7 @@ namespace Garage
         private CarType carType { get; set; }
         public HybridCar(double price, uint yearOfMade, uint kilometers, Color color, string firm) : base(price, yearOfMade, kilometers, color, firm)
         {
-            carType = CarType.Hybrid;
+            this.carType = CarType.Hybrid;
         }
 
         public override void PrintCarDetails()

@@ -34,7 +34,7 @@ namespace Garage
             for (int i = 0; i < carsInTheGarageAsSpan.Length; ++i)
             {
                 Console.Write($"{i}\t\t");
-                Console.WriteLine(carsInTheGarageAsSpan.ToString());
+                Console.WriteLine(carsInTheGarageAsSpan[i].ToString());
             }
         }
 
@@ -49,7 +49,11 @@ namespace Garage
 
             for (int i = 0; i < carsInTheGarageAsSpan.Length; ++i)
             {
-                if ((parametersToConsider[0] && carsInTheGarageAsSpan[i]) && () && ())
+                if ((parametersToConsider[0] || carsInTheGarageAsSpan[i].CarType == @enum) && (parametersToConsider[1] || carsInTheGarageAsSpan[i].Color == color) 
+                    && (parametersToConsider[2] || carsInTheGarageAsSpan[i].YearOfMade > yearOfMade))
+                {
+                    result.Add(carsInTheGarage[i]);
+                }
             }
 
             return result;

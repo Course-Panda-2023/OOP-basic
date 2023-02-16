@@ -3,3 +3,13 @@ C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\Garage
 C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\Garage.AssemblyInfoInputs.cache
 C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\Garage.AssemblyInfo.cs
 C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\Garage.csproj.CoreCompileInputs.cache
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\bin\Debug\net6.0\Garage.exe
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\bin\Debug\net6.0\Garage.deps.json
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\bin\Debug\net6.0\Garage.runtimeconfig.json
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\bin\Debug\net6.0\Garage.dll
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\bin\Debug\net6.0\Garage.pdb
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\Garage.dll
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\refint\Garage.dll
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\Garage.pdb
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\Garage.genruntimeconfig.cache
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\Garage\obj\Debug\net6.0\ref\Garage.dll

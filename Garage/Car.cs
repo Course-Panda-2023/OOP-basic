@@ -9,7 +9,7 @@ namespace Garage
 {
     internal abstract class Car
     {
-        private CarType carType { get; set; }
+        protected CarType carType { get; set; }
 
         private double price;
 
@@ -59,6 +59,8 @@ namespace Garage
 			get { return price; }
 			set { price = value; }
 		}
+
+		public CarType CarType { get { return carType; } }
 
 		public abstract void PrintCarDetails();
     }
