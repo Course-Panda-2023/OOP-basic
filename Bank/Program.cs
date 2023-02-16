@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Bank.Controller;
+﻿using Bank.Controller;
 using Bank.Model;
 using Bank.View;
 using Bank.Utils;
