@@ -1,0 +1,15 @@
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\bin\Debug\net6.0\Matrix.exe
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\bin\Debug\net6.0\Matrix.deps.json
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\bin\Debug\net6.0\Matrix.runtimeconfig.json
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\bin\Debug\net6.0\Matrix.dll
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\bin\Debug\net6.0\Matrix.pdb
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.csproj.AssemblyReference.cache
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.AssemblyInfoInputs.cache
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.AssemblyInfo.cs
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.csproj.CoreCompileInputs.cache
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.dll
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\refint\Matrix.dll
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.pdb
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\Matrix.genruntimeconfig.cache
+C:\Users\AssafHillel\source\repos\OOPBaicsProject\OOPBaicsProject\obj\Debug\net6.0\ref\Matrix.dll

@@ -40,6 +40,11 @@ namespace OOPBasics
             this.matrix = (double[,])twoDMatrix.matrix.Clone();
         }
 
+        public TwoDMatrix(double[,] matrix)
+        {
+            this.matrix = matrix;
+        }
+
         /********************* indexer ***********************/
 
         /// <summary>
@@ -107,6 +112,8 @@ namespace OOPBasics
             const int LESS_IS_NEGATIVE = 0;
             if (row < LESS_IS_NEGATIVE) return;
             if (col < LESS_IS_NEGATIVE) return;
+            if (row >= matrix.GetLength(0)) return;
+            if (col >= matrix.GetLength(1)) return;
 
             matrix[row, col] = value;
         }
@@ -151,7 +158,7 @@ namespace OOPBasics
             const double ERROR_OCCURED = -1.0;
             if (matrix is null) return ERROR_OCCURED;
 
-            double sum = 0.0;
+            double sum = 0f;
             for (int i = 0; i < matrix.GetLength(0); ++i)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -170,7 +177,7 @@ namespace OOPBasics
         public bool CompareSums(TwoDMatrix twoDMatrix)
         {
             bool EQUALS = true;
-            bool NOT_EQUALS = true;
+            bool NOT_EQUALS = false;
 
             return SumOfMatrix(twoDMatrix.matrix).Equals(SumOfMatrix(matrix)) ? EQUALS : NOT_EQUALS;
         }
@@ -190,7 +197,7 @@ namespace OOPBasics
             {
                 for (int j = 0; j < col; ++j)
                 {
-                    twoDMatrix[i, j] *= scalar; 
+                    twoDMatrix[i, j] = matrix[i, j] * scalar; 
                 }
             }
             
@@ -203,7 +210,7 @@ namespace OOPBasics
         /// <param name="matrix">a matrix</param>
         /// <param name="anotherMatrix">an another matrix</param>
         /// <returns></returns>
-        public static TwoDMatrix operator +(TwoDMatrix matrix, TwoDMatrix anotherMatrix)
+        public static TwoDMatrix operator + (TwoDMatrix matrix, TwoDMatrix anotherMatrix)
         {
             int row = matrix.GetRowsLength();
             int col = matrix.GetColsLength();
@@ -211,16 +218,13 @@ namespace OOPBasics
             int anotherRow = anotherMatrix.GetRowsLength();
             int anotherCol = anotherMatrix.GetRowsLength();
 
-            if (row != anotherRow || col != anotherCol)
-            {
-               // todo - throw an exception
-            }
+            
             TwoDMatrix twoDMatrix = new TwoDMatrix(row, col);
             for (int i = 0; i < row; ++i)
             {
                 for (int j = 0; j < col; ++j)
                 {
-                    twoDMatrix[i, j] += anotherMatrix.matrix[i, j];
+                    twoDMatrix[i, j] = matrix[i, j] + anotherMatrix[i, j];
                 }
             }
 
@@ -233,7 +237,7 @@ namespace OOPBasics
         /// <param name="matrix">a matrix</param>
         /// <param name="anotherMatrix">an anotheer matrix</param>
         /// <returns></returns>
-        public static TwoDMatrix operator -(TwoDMatrix matrix, TwoDMatrix anotherMatrix)
+        public static TwoDMatrix operator - (TwoDMatrix matrix, TwoDMatrix anotherMatrix)
         {
             int row = matrix.GetRowsLength();
             int col = matrix.GetColsLength();
@@ -241,16 +245,13 @@ namespace OOPBasics
             int anotherRow = anotherMatrix.GetRowsLength();
             int anotherCol = anotherMatrix.GetRowsLength();
 
-            if (row != anotherRow || col != anotherCol)
-            {
-                // todo - throw an exception
-            }
+            
             TwoDMatrix twoDMatrix = new TwoDMatrix(row, col);
             for (int i = 0; i < row; ++i)
             {
                 for (int j = 0; j < col; ++j)
                 {
-                    twoDMatrix[i, j] -= anotherMatrix.matrix[i, j];
+                    twoDMatrix[i, j] = matrix[i, j] - anotherMatrix[i, j];
                 }
             }
 
