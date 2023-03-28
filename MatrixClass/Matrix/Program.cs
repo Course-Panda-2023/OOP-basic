@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System.Data.Common;
 
 /* (tests)
 //MatrixClass matrix_test = new MatrixClass(400, 400);
@@ -10,9 +9,6 @@ MatrixClass matrix_test2 = new MatrixClass(matrix_test1);
 matrix_test2.setValueAt(2, 2, 10);
 Console.WriteLine((matrix_test1 + matrix_test2).Sum());
 */
-
-
-
 
 class MatrixClass
 {
