@@ -1,1 +1,39 @@
 Write your answers here:
+
+1.
+public- can be accessed by any other code (if in another assembly it has to reference it)
+protected- can only be accessed only by code in a derived class or in the same class/struct
+private- can only be accessed only by code in the same class/struct
+internal- can be accessed by any code in the same assembly
+
+2.
+by using access modifiers you can prevent external code from accessing the internal functionality of a class, which helps to keep the code organized and maintainable.
+
+3.
+Fields are nearly always private and the properties are used to access them
+
+4.
+we use the const keyword when we know for sure the value of a variable will never change during the runtime. we use the readonly keyword when we are not sure whether the value of a variable of an object needs to change but want to prevent other classes from changing it
+
+5.
+im pretty sure no
+
+6.
+a property can be static but an indexer is always an instance
+
+7.
+you can't modify an abstract class with the sealed modifier because the sealed modifier prevents a class from being inherited and the abstract modifier requires a class to be inherited
+
+8. (construtors first call their base constructor)
+"Charmander is on fire!"
+"Charmeleon in on fire!"
+"Charizard is on fire!"
+"Flamethrower"
+"Charmander is on fire!"
+"Charmeleon in on fire!"
+"Charizard is on fire!"
+"Flamethrower"
+"Charmander is on fire!"
+"Charmeleon in on fire!"
+"Fire punch"
+"Oh no! its Wartortle"
